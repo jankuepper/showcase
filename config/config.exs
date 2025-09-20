@@ -45,7 +45,8 @@ config :spark,
 
 config :showcase,
   ecto_repos: [Showcase.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  ash_domains: [Showcase.Content]
 
 # Configures the endpoint
 config :showcase, ShowcaseWeb.Endpoint,
