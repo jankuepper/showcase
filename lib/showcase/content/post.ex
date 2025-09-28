@@ -10,7 +10,15 @@ defmodule Showcase.Content.Post do
   end
 
   actions do
-    defaults [:read]
+    defaults [:read, :destroy]
+
+    create :create do
+      accept [:title, :animal_name, :img_url]
+    end
+
+    update :update do
+      accept [:title, :animal_name, :img_url]
+    end
   end
 
   attributes do

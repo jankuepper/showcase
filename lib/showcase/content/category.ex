@@ -9,6 +9,18 @@ defmodule Showcase.Content.Category do
     repo Showcase.Repo
   end
 
+  actions do
+    defaults [:read, :destroy]
+
+    create :create do
+      accept [:name]
+    end
+
+    update :update do
+      accept [:name]
+    end
+  end
+
   attributes do
     uuid_primary_key :id
 
